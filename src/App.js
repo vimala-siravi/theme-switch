@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ThemeButton from "./components/ThemeButtons/ThemeButton";
+import themeButtons from "./data/buttonTheme.json";
+import ProductList from "./components/Products/ProductList";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState("light");
+
+  const { lightButton, darkButton, blueButton } = themeButtons;
+
+  const toggleTheme = (newTheme) => {
+    setTheme(newTheme);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`container mx-auto px-4 ${theme}`}>
+      <h1 className="text-3xl font-bold underline text-center">
+        Switch the theme
+      </h1>
+      <div className="flex items-center justify-center gap-4 mt-5">
+        <ThemeButton theme={lightButton} onClick={() => toggleTheme("light")} />
+        <ThemeButton theme={darkButton} onClick={() => toggleTheme("dark")} />
+        <ThemeButton theme={blueButton} onClick={() => toggleTheme("blue")} />
+      </div>
+      <ProductList />
     </div>
   );
-}
+};
 
 export default App;
