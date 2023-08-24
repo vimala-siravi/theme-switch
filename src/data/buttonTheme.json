@@ -1,0 +1,17 @@
+{
+  "lightButton": {
+    "backgroundColor": "white",
+    "color": "black",
+    "name": "Light"
+  },
+  "darkButton": {
+    "backgroundColor": "black",
+    "color": "white",
+    "name": "Dark"
+  },
+  "blueButton": {
+    "backgroundColor": "blue",
+    "color": "white",
+    "name": "Blue"
+  }
+}

@@ -1,0 +1,11 @@
+.btn-white {
+  @apply bg-white text-black;
+}
+
+.btn-black {
+  @apply bg-black text-white;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
