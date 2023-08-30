@@ -1,5 +1,3 @@
-import React from "react";
-
 function ProductItem({ details }) {
   return (
     <li className="py-5">

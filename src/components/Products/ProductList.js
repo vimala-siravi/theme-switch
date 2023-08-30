@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductItem from "./ProductItem";
 
-function ProductList() {
+function ProductList({ productLimit }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function ProductList() {
 
   const fetchProducts = async () => {
     const response = await fetch(
-      `https://dummyjson.com/products?limit=${process.env.REACT_APP_PRODUCTS_LIMIT}`
+      `https://dummyjson.com/products?limit=${productLimit}`
     );
     const data = await response.json();
     if (data?.products) {
