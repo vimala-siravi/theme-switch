@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ThemeButton from "./components/ThemeButtons/ThemeButton";
 import themeButtons from "./data/buttonTheme.json";
 import ProductList from "./components/Products/ProductList";
-import { themes } from "@vimala-siravi/my-library";
+import { themes } from "tscommon-components";
 import "./App.css";
 
 const App = () => {
